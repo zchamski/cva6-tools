@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #############################################################################
 #
@@ -35,7 +35,7 @@
 # build/... subdirectories
 
 # Helper function to print usage information.
-function print_usage()
+print_usage()
 {
     echo Usage:
     echo "  $SHELL $0 [-f|--force] [CONFIG_NAME] INSTALL_PREFIX"
@@ -49,9 +49,9 @@ function print_usage()
     echo "                     missing parent directories will be created as needed.)"
 }   
 
-# Helper function to parse the cmdline args
+# Helper function to parse the cmdline args.
 # Takes the complete list of positional args, drops them as they get parsed.
-function parse_cmdline()
+parse_cmdline()
 {
     # "Force rebuild" mode: try before any file/directory names.
     # Valid only with 2+ cmdline args.

@@ -36,7 +36,7 @@
 # - 15 GB of disk space
 
 # Helper function to print usage information.
-function print_usage()
+print_usage()
 {
     echo Usage:
     echo "        your-favorite-shell $0 [CONFIG_NAME]"
@@ -46,7 +46,7 @@ function print_usage()
 
 # Helper function to parse the cmdline args.
 # Takes the complete list of positional args as input, drops them locally as they get parsed.
-function parse_cmdline()
+parse_cmdline()
 {
     # There must be exactly one positional arg.
     if [ $# -gt 1 ]; then
@@ -102,7 +102,7 @@ fi
 # - $1: the Git repository to use
 # - $2: the local directory for the source code
 # - $3: the actual commit to check out (SHA1, tag, etc.)
-function setup_sources_from_git()
+setup_sources_from_git()
 {
     # make sure the source directory exists and is populated
     # with Git information.  If a stale non-Git directory exits,
